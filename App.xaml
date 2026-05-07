@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FinalProject.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#7B61FF</Color>
+            <Color x:Key="DarkBackground">#0F1021</Color>
+            <Color x:Key="CardColor">#1B1C3A</Color>
+            <Color x:Key="TextLight">#FFFFFF</Color>
+            <Color x:Key="TextSoft">#D6D6FF</Color>
+
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkBackground}" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TextLight}" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="15" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="HeightRequest" Value="55" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="PlaceholderColor" Value="#BBBBFF" />
+                <Setter Property="BackgroundColor" Value="#2B2C4F" />
+            </Style>
+            <Style TargetType="DatePicker">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="#2B2C4F" />
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="TitleColor" Value="#BBBBFF" />
+                <Setter Property="BackgroundColor" Value="#2B2C4F" />
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource CardColor}" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="Padding" Value="15" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

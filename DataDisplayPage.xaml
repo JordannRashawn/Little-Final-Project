@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FinalProject.DataDisplayPage"
+    Title="Saved Readings">
+
+    <VerticalStackLayout Padding="15" Spacing="15">
+        <Label Text="Saved Zodiac Readings" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+        <SearchBar x:Name="searchBar" Placeholder="Search by name or zodiac" TextChanged="OnSearchTextChanged" />
+        <CollectionView x:Name="readingsCollection">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Info" BackgroundColor="#7B61FF" Invoked="OnSwipeInfo" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Frame Margin="0,6">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="{Binding name}" FontSize="22" FontAttributes="Bold" />
+                                <Label Text="{Binding birthdate}" FontSize="16" TextColor="#D6D6FF" />
+                                <Label Text="{Binding zodiac}" FontSize="18" TextColor="#BBBBFF" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

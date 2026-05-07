@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FinalProject.MainPage"
+    Title="Home"
+    BackgroundColor="#0F1021">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="25">
+
+            <!-- TITLE -->
+            <Label
+                x:Name="welcomeLabel"
+                Text="✨ Welcome to ZodiacScope ✨"
+                FontSize="34"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                TextColor="White" />
+
+            <!-- SUBTITLE -->
+            <Label
+                Text="Discover your zodiac sign and explore the stars."
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                TextColor="#D6D6FF" />
+
+            <!-- IMAGE 1 -->
+            <Frame
+                x:Name="zodiacFrame"
+                Padding="15"
+                BackgroundColor="#1B1C3A"
+                CornerRadius="25">
+
+                <Image
+                    Source="zodiacsigns.png"
+                    HeightRequest="250"
+                    Aspect="AspectFit" />
+
+            </Frame>
+
+            <!-- IMAGE 2 -->
+            <Frame
+                Padding="10"
+                BackgroundColor="#1B1C3A"
+                CornerRadius="25">
+
+                <Image
+                    Source="zodiac2.png"
+                    HeightRequest="220"
+                    Aspect="AspectFill"/>
+
+            </Frame>
+
+            <!-- IMAGE 3 -->
+            <Frame
+                Padding="10"
+                BackgroundColor="#1B1C3A"
+                CornerRadius="25">
+
+                <Image
+                    Source="zodiac3.png"
+                    HeightRequest="220"
+                    Aspect="AspectFill"/>
+
+            </Frame>
+
+            <!-- VIDEO -->
+            <Label
+                Text="🎥 Learn About Zodiac Signs"
+                FontSize="24"
+                FontAttributes="Bold"
+                TextColor="White" />
+
+            <WebView
+                HeightRequest="250"
+                Source="https://youtu.be/VjiPoRHA-T0?si=vtW4WtwAIWJEa0w0"/>
+
+            <!-- BUTTON -->
+            <Button
+                Text="Enter My Zodiac Info"
+                Clicked="OnExploreClicked"
+                BackgroundColor="#7B61FF"
+                TextColor="White"
+                CornerRadius="15"
+                HeightRequest="60"
+                FontSize="18"/>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

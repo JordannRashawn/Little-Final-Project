@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FinalProject.SettingsPage"
+    Title="Settings">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Label Text="Settings / About" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Frame>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Theme Toggle" FontSize="22" FontAttributes="Bold" />
+                    <HorizontalStackLayout Spacing="15">
+                        <Label Text="Dark Mode" VerticalOptions="Center" />
+                        <Switch x:Name="themeSwitch" IsToggled="True" Toggled="OnThemeChanged" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+            <Frame>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="About ZodiacScope" FontSize="22" FontAttributes="Bold" />
+                    <Label Text="ZodiacScope is a .NET MAUI app that lets users enter their name, birthdate, and zodiac sign. The app saves and displays information using Google Sheets." TextColor="#D6D6FF" />
+                </VerticalStackLayout>
+            </Frame>
+            <Frame>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Project Features" FontSize="22" FontAttributes="Bold" />
+                    <Label Text="• Flyout navigation&#10;• Four pages&#10;• Animations&#10;• Theme toggle&#10;• Google Sheets read/write&#10;• Search/filter&#10;• Swipe feature&#10;• Pop-up alerts&#10;• Embedded video" TextColor="#D6D6FF" />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
